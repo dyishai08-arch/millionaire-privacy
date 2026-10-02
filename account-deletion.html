@@ -1,14 +1,21 @@
-<!DOCTYPE html>
+from pathlib import Path
+
+html = """<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>בקשת מחיקת חשבון</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>בקשת מחיקת חשבון</title>
 </head>
 <body>
-<h1>בקשת מחיקת חשבון</h1>
-<p>משתמשים באפליקציית Millionaire יכולים לבקש למחוק את החשבון ואת הנתונים האישיים המשויכים אליו.</p>
-<p>כדי לבקש מחיקת חשבון, יש לפנות למפתח האפליקציה ולציין את הפרטים הדרושים לזיהוי החשבון.</p>
-<p>הבקשה תטופל בהתאם לדרישות החוק ולמדיניות שמירת הנתונים של האפליקציה.</p>
+  <h1>בקשת מחיקת חשבון</h1>
+  <p>משתמשים באפליקציית מיליונר יכולים לבקש למחוק את החשבון ואת הנתונים האישיים המשויכים אליו.</p>
+  <p>כדי לבקש מחיקת חשבון, שלחו בקשה לכתובת:</p>
+  <p><a href="mailto:dyishai08@gmail.com">dyishai08@gmail.com</a></p>
 </body>
 </html>
+"""
+
+path = "/mnt/data/account-deletion-clean.html"
+Path(path).write_text(html, encoding="utf-8")
+print(path)
